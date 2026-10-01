@@ -1,0 +1,144 @@
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+/* Logo */
+
+.admin-sidebar-logo {
+  height: 80px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #eef0f2;
+}
+
+.admin-logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #0f766e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.admin-sidebar-logo h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #172033;
+}
+
+.admin-sidebar-logo span {
+  font-size: 12px;
+  color: #7b8494;
+}
+
+/* Navigation */
+
+.admin-sidebar-nav {
+  flex: 1;
+  padding: 22px 14px;
+  overflow-y: auto;
+}
+
+.admin-menu-title {
+  margin: 0 12px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9aa1ad;
+  letter-spacing: 1px;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 14px;
+  margin-bottom: 5px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #596273;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.admin-nav-item:hover {
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+.admin-nav-item.active {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.admin-nav-icon {
+  width: 22px;
+  text-align: center;
+  font-size: 17px;
+}
+
+/* Bottom */
+
+.admin-sidebar-bottom {
+  padding: 16px 14px;
+  border-top: 1px solid #eef0f2;
+}
+
+.admin-back-site {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #596273;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.admin-back-site:hover {
+  background: #f3f4f6;
+  color: #0f766e;
+}
+
+/* Mobile overlay */
+
+.admin-sidebar-overlay {
+  display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 999;
+  }
+}

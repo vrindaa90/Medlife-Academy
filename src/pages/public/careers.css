@@ -1,0 +1,2023 @@
+
+
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+
+            --blue-dark: #063b68;
+            --blue: #087bb9;
+            --blue-light: #2aa9dc;
+
+            --mint: #c9f7e8;
+            --mint-dark: #6bd5b6;
+
+            --white: #ffffff;
+
+            --bg: #f5fbfd;
+
+            --text: #18384f;
+            --muted: #718899;
+
+            --border: #dcecf1;
+
+            --soft-blue: #eef9fc;
+            --soft-mint: #effbf7;
+
+            --shadow:
+                0 18px 45px rgba(6, 59, 104, 0.09);
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "DM Sans", sans-serif;
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+
+        .container {
+
+            width: min(1180px, 92%);
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.96);
+
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .navbar {
+
+            min-height: 76px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            color: var(--blue-dark);
+
+        }
+
+
+        .logo-mark {
+
+            width: 41px;
+            height: 41px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 12px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    var(--blue-light)
+                );
+
+            box-shadow:
+                0 8px 20px rgba(8,123,185,0.22);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+        }
+
+
+        .nav-links a {
+
+            padding: 9px 12px;
+
+            color: #527086;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--blue);
+
+            background: var(--soft-blue);
+
+        }
+
+
+        .nav-links a.active {
+
+            color: white;
+
+            background: var(--blue);
+
+        }
+
+
+        .nav-links a.active:hover {
+
+            background: var(--blue-dark);
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 90px 0 80px;
+
+            background:
+
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(201,247,232,0.95),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 5% 50%,
+                    rgba(42,169,220,0.10),
+                    transparent 30%
+                ),
+
+                var(--bg);
+
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 360px;
+            height: 360px;
+
+            border-radius: 50%;
+
+            border: 50px solid rgba(8,123,185,0.035);
+
+            right: -160px;
+
+            top: -180px;
+
+        }
+
+
+        .hero-grid {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: grid;
+
+            grid-template-columns: 1.05fr 0.95fr;
+
+            align-items: center;
+
+            gap: 70px;
+
+        }
+
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            background: var(--mint);
+
+            color: var(--blue-dark);
+
+            border-radius: 50px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .eyebrow span {
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--blue);
+
+        }
+
+
+        .hero h1 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(40px, 5vw, 61px);
+
+            line-height: 1.08;
+
+            letter-spacing: -2px;
+
+            color: var(--blue-dark);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--blue);
+
+        }
+
+
+        .hero-copy p {
+
+            color: var(--muted);
+
+            font-size: 16px;
+
+            max-width: 600px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+        }
+
+
+        .primary-btn {
+
+            display: inline-block;
+
+            padding: 13px 21px;
+
+            background: var(--blue);
+
+            color: white;
+
+            border-radius: 11px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .primary-btn:hover {
+
+            background: var(--blue-dark);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .secondary-btn {
+
+            display: inline-block;
+
+            padding: 13px 21px;
+
+            background: white;
+
+            color: var(--blue-dark);
+
+            border: 1px solid var(--border);
+
+            border-radius: 11px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .secondary-btn:hover {
+
+            background: var(--soft-blue);
+
+        }
+
+
+        /* =====================================================
+           HERO VISUAL
+        ===================================================== */
+
+        .career-visual {
+
+            position: relative;
+
+            min-height: 350px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .career-main-card {
+
+            width: 300px;
+
+            padding: 27px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 23px;
+
+            box-shadow:
+                0 25px 60px rgba(6,59,104,0.13);
+
+            position: relative;
+
+            z-index: 3;
+
+        }
+
+
+        .career-icon {
+
+            width: 65px;
+            height: 65px;
+
+            display: grid;
+
+            place-items: center;
+
+            background: var(--mint);
+
+            border-radius: 18px;
+
+            font-size: 29px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .career-main-card h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: var(--blue-dark);
+
+            font-size: 21px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .career-main-card p {
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .career-stats {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 9px;
+
+        }
+
+
+        .career-stat {
+
+            padding: 12px;
+
+            background: #f6fbfc;
+
+            border-radius: 11px;
+
+            border: 1px solid var(--border);
+
+        }
+
+
+        .career-stat strong {
+
+            display: block;
+
+            color: var(--blue);
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 19px;
+
+        }
+
+
+        .career-stat span {
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+        }
+
+
+        .floating-job {
+
+            position: absolute;
+
+            padding: 12px 16px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 15px 35px rgba(6,59,104,0.10);
+
+            color: var(--blue-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+        }
+
+
+        .floating-job.one {
+
+            top: 30px;
+
+            left: 0;
+
+        }
+
+
+        .floating-job.two {
+
+            right: 0;
+
+            bottom: 35px;
+
+        }
+
+
+        .floating-job span {
+
+            color: var(--blue);
+
+        }
+
+
+        /* =====================================================
+           INTRO STRIP
+        ===================================================== */
+
+        .intro-section {
+
+            padding: 35px 0 20px;
+
+        }
+
+
+        .intro-box {
+
+            padding: 25px 30px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 17px;
+
+            box-shadow: var(--shadow);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 25px;
+
+        }
+
+
+        .intro-box h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: var(--blue-dark);
+
+            font-size: 19px;
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .intro-box p {
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+        }
+
+
+        .sample-label {
+
+            flex-shrink: 0;
+
+            padding: 8px 11px;
+
+            background: #fff8e8;
+
+            color: #9b7428;
+
+            border-radius: 8px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+        }
+
+
+        /* =====================================================
+           JOB SECTION
+        ===================================================== */
+
+        .jobs-section {
+
+            padding: 55px 0 100px;
+
+        }
+
+
+        .section-heading {
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .section-heading.center {
+
+            text-align: center;
+
+        }
+
+
+        .section-heading h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 35px;
+
+            color: var(--blue-dark);
+
+            line-height: 1.2;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .section-heading h2 span {
+
+            color: var(--blue);
+
+        }
+
+
+        .section-heading p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           FILTERS
+        ===================================================== */
+
+        .filter-box {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 17px;
+
+            box-shadow: var(--shadow);
+
+            padding: 17px;
+
+            margin-bottom: 28px;
+
+        }
+
+
+        .filter-top {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .filter-top strong {
+
+            font-family: "Manrope", sans-serif;
+
+            color: var(--blue-dark);
+
+            font-size: 14px;
+
+        }
+
+
+        .job-count {
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+        }
+
+
+        .filter-buttons {
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .filter-btn {
+
+            border: 1px solid var(--border);
+
+            background: #f8fcfd;
+
+            color: #5d7585;
+
+            border-radius: 9px;
+
+            padding: 9px 13px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .filter-btn:hover {
+
+            background: var(--soft-blue);
+
+            color: var(--blue);
+
+        }
+
+
+        .filter-btn.active {
+
+            background: var(--blue);
+
+            border-color: var(--blue);
+
+            color: white;
+
+        }
+
+
+        /* =====================================================
+           JOB GRID
+        ===================================================== */
+
+        .job-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 19px;
+
+        }
+
+
+        .job-card {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 24px;
+
+            box-shadow: var(--shadow);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .job-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 25px 55px rgba(6,59,104,0.13);
+
+        }
+
+
+        .job-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .job-department {
+
+            display: inline-block;
+
+            padding: 6px 9px;
+
+            background: var(--soft-mint);
+
+            color: #217a63;
+
+            border-radius: 7px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+        }
+
+
+        .new-badge {
+
+            padding: 6px 9px;
+
+            background: #eaf7ff;
+
+            color: var(--blue);
+
+            border-radius: 7px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+        }
+
+
+        .job-card h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: var(--blue-dark);
+
+            font-size: 19px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .job-description {
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.65;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .job-meta {
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            padding-bottom: 17px;
+
+            border-bottom: 1px solid var(--border);
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .job-meta span {
+
+            padding: 6px 9px;
+
+            border-radius: 7px;
+
+            background: #f6fafc;
+
+            color: #647b89;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+        }
+
+
+        .job-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+
+        .posted {
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+        }
+
+
+        .apply-btn {
+
+            display: inline-block;
+
+            padding: 9px 15px;
+
+            background: var(--blue);
+
+            color: white;
+
+            border-radius: 9px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .apply-btn:hover {
+
+            background: var(--blue-dark);
+
+        }
+
+
+        /* =====================================================
+           NO RESULTS
+        ===================================================== */
+
+        .no-results {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            color: var(--muted);
+
+        }
+
+
+        .no-results strong {
+
+            display: block;
+
+            color: var(--blue-dark);
+
+            font-family: "Manrope", sans-serif;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* =====================================================
+           WHY JOIN
+        ===================================================== */
+
+        .why-section {
+
+            padding: 90px 0;
+
+            background: white;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .why-copy h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: var(--blue-dark);
+
+            font-size: 39px;
+
+            line-height: 1.15;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .why-copy h2 span {
+
+            color: var(--blue);
+
+        }
+
+
+        .why-copy p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            max-width: 520px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .benefit-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 14px;
+
+        }
+
+
+        .benefit {
+
+            padding: 20px;
+
+            border: 1px solid var(--border);
+
+            background: #f8fcfd;
+
+            border-radius: 16px;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .benefit:hover {
+
+            background: var(--soft-mint);
+
+            transform: translateY(-4px);
+
+        }
+
+
+        .benefit-icon {
+
+            width: 40px;
+            height: 40px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 11px;
+
+            background: var(--mint);
+
+            font-size: 18px;
+
+            margin-bottom: 11px;
+
+        }
+
+
+        .benefit h4 {
+
+            color: var(--blue-dark);
+
+            font-size: 13px;
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .benefit p {
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           HIRING PROCESS
+        ===================================================== */
+
+        .process-section {
+
+            padding: 95px 0;
+
+        }
+
+
+        .process-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .process-card {
+
+            text-align: center;
+
+            padding: 25px 18px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 17px;
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .process-number {
+
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            margin: 0 auto 13px;
+
+            border-radius: 50%;
+
+            background: var(--blue);
+
+            color: white;
+
+            font-family: "Manrope", sans-serif;
+
+            font-weight: 800;
+
+            font-size: 13px;
+
+        }
+
+
+        .process-card h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: var(--blue-dark);
+
+            font-size: 14px;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .process-card p {
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+        }
+
+
+        /* =====================================================
+           GENERAL APPLICATION
+        ===================================================== */
+
+        .apply-section {
+
+            padding: 0 0 95px;
+
+        }
+
+
+        .apply-box {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue-dark),
+                    #075987
+                );
+
+            color: white;
+
+            border-radius: 27px;
+
+            padding: 48px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .apply-box::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 260px;
+            height: 260px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(201,247,232,0.12);
+
+            right: -90px;
+
+            top: -120px;
+
+        }
+
+
+        .apply-copy {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .apply-copy h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 31px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .apply-copy p {
+
+            color: rgba(255,255,255,0.68);
+
+            font-size: 13px;
+
+            max-width: 590px;
+
+        }
+
+
+        .apply-button {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding: 14px 23px;
+
+            border-radius: 11px;
+
+            background: var(--mint);
+
+            color: var(--blue-dark);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .apply-button:hover {
+
+            background: white;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background: #032d4f;
+
+            color: white;
+
+            padding: 55px 0 25px;
+
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr 1fr 1fr 1fr;
+
+            gap: 45px;
+
+            padding-bottom: 40px;
+
+        }
+
+
+        .footer-logo {
+
+            display: inline-block;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            margin-bottom: 13px;
+
+        }
+
+
+        .footer-about {
+
+            max-width: 300px;
+
+            color: rgba(255,255,255,0.62);
+
+            font-size: 12px;
+
+        }
+
+
+        footer h4 {
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        footer ul {
+
+            list-style: none;
+
+            display: grid;
+
+            gap: 9px;
+
+        }
+
+
+        footer li,
+        footer li a {
+
+            color: rgba(255,255,255,0.58);
+
+            font-size: 12px;
+
+        }
+
+
+        footer li a:hover {
+
+            color: var(--mint);
+
+        }
+
+
+        .copyright {
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.10);
+
+            text-align: center;
+
+            color: rgba(255,255,255,0.40);
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .hero-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero-copy {
+
+                text-align: center;
+
+                margin: auto;
+
+            }
+
+
+            .hero-copy p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+
+            .hero-buttons {
+
+                justify-content: center;
+
+            }
+
+
+            .career-visual {
+
+                max-width: 600px;
+
+                margin: auto;
+
+            }
+
+
+            .job-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .why-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .process-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .hero {
+
+                padding: 65px 0;
+
+            }
+
+
+            .hero h1 {
+
+                letter-spacing: -1px;
+
+            }
+
+
+            .career-visual {
+
+                min-height: 320px;
+
+            }
+
+
+            .floating-job.one {
+
+                left: -5px;
+
+            }
+
+
+            .floating-job.two {
+
+                right: -5px;
+
+            }
+
+
+            .intro-box {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+
+            .filter-top {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+
+            .job-bottom {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+
+            .why-copy h2 {
+
+                font-size: 32px;
+
+            }
+
+
+            .benefit-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .process-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .apply-box {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 35px 25px;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
+            }
+
+        }
+
+        /* =====================================================
+   CAREERS PAGE - FINAL HERO REFINEMENT
+   Only visual refinement - existing design preserved
+===================================================== */
+
+.hero {
+    padding: 68px 0 62px;
+}
+
+.hero-grid {
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-copy {
+    max-width: 610px;
+}
+
+.hero h1 {
+    max-width: 600px;
+    font-size: clamp(44px, 4.6vw, 58px);
+    line-height: 1.04;
+    letter-spacing: -1.7px;
+    margin-bottom: 18px;
+}
+
+.hero-copy p {
+    max-width: 570px;
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 22px;
+}
+
+.hero-buttons {
+    gap: 11px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 12.5px;
+}
+
+
+/* =====================================================
+   RIGHT CAREER CARD
+===================================================== */
+
+.career-visual {
+    min-height: 330px;
+}
+
+.career-main-card {
+    width: 300px;
+    padding: 24px;
+    border-radius: 21px;
+
+    box-shadow:
+        0 22px 50px rgba(6, 59, 104, 0.11);
+}
+
+.career-icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+    font-size: 27px;
+
+    margin-bottom: 16px;
+}
+
+.career-main-card h3 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 7px;
+}
+
+.career-main-card p {
+    font-size: 11.5px;
+    line-height: 1.55;
+    margin-bottom: 17px;
+}
+
+.career-stats {
+    gap: 8px;
+}
+
+.career-stat {
+    padding: 11px;
+    border-radius: 10px;
+}
+
+.career-stat strong {
+    font-size: 18px;
+}
+
+.career-stat span {
+    font-size: 8.5px;
+}
+
+
+/* =====================================================
+   FLOATING JOB TAGS
+===================================================== */
+
+.floating-job {
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    font-size: 9px;
+
+    box-shadow:
+        0 12px 28px rgba(6, 59, 104, 0.09);
+}
+
+.floating-job.one {
+    top: 24px;
+    left: -12px;
+}
+
+.floating-job.two {
+    right: -12px;
+    bottom: 27px;
+}
+
+
+/* =====================================================
+   HERO RESPONSIVE REFINEMENT
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        padding: 65px 0 58px;
+    }
+
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 5vw, 54px);
+    }
+
+    .career-main-card {
+        width: 290px;
+    }
+
+    .floating-job.one {
+        left: -5px;
+    }
+
+    .floating-job.two {
+        right: -5px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding: 55px 0 50px;
+    }
+
+    .hero-grid {
+        gap: 25px;
+    }
+
+    .hero-copy {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        font-size: 38px;
+        line-height: 1.08;
+        letter-spacing: -1px;
+    }
+
+    .hero-copy p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 11px 17px;
+        font-size: 11.5px;
+    }
+
+    .career-visual {
+        min-height: 310px;
+    }
+
+    .career-main-card {
+        width: min(300px, 88%);
+        padding: 22px;
+    }
+
+    .floating-job.one {
+        left: 0;
+    }
+
+    .floating-job.two {
+        right: 0;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .career-main-card {
+        width: 92%;
+    }
+
+    .floating-job {
+        font-size: 8px;
+        padding: 8px 10px;
+    }
+
+    .floating-job.one {
+        left: -4px;
+    }
+
+    .floating-job.two {
+        right: -4px;
+    }
+}
+/* =====================================================
+   FINAL SMALL CAREERS REFINEMENTS
+===================================================== */
+
+/* Remove Non-Academic Roles floating label */
+.floating-job.two {
+    display: none;
+}
+
+/* Center the suitcase icon */
+.career-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
