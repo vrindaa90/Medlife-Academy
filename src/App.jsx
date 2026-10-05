@@ -76,12 +76,14 @@ function App() {
             path="/student-hub"
             element={<StudentHub />}
           />
+
           <Route
             path="/thank-you"
             element={<ThankYou />}
           />
-          <Route 
-            path="/career-apply" 
+
+          <Route
+            path="/career-apply"
             element={<CareerApply />}
           />
 

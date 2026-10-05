@@ -5,7 +5,7 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-import "./adminqueryDetails.css";
+import "./adminquerydetails.css";
 import apiRequest from "../../services/apiService";
 import { useAuth } from "../../context/authcontext";
 
