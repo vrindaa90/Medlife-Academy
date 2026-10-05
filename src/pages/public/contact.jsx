@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Contact.css";
+import "./contact.css";
 
 function Contact() {
   const navigate = useNavigate();

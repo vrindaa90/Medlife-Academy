@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Centers.css";
+import "./centers.css";
 
 function Centers() {
   return (

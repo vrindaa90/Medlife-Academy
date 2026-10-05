@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./Result.css";
+import "./result.css";
 
 const resultsByYear = {
   2026: {

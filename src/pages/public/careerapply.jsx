@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./CareerApply.css";
+import "./careerapply.css";
 
 const API_URL = "http://localhost:5000/api/careers";
 

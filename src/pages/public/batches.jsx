@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Batches.css";
+import "./batches.css";
 
 function Batches() {
   return (
