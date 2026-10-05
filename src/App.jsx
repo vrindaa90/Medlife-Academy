@@ -11,7 +11,7 @@ import Centers from "./pages/public/centers";
 import Contact from "./pages/public/contact";
 import Results from "./pages/public/results";
 import StudentHub from "./pages/public/StudentHub";
-import ThankYou from "./pages/public/ThankYou";
+import ThankYou from "./pages/public/Thankyou";
 import CareerApply from "./pages/public/careerapply";
 
 // Admin Pages
