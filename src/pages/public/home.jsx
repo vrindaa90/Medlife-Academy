@@ -75,7 +75,7 @@ function Home() {
     try {
       setSubmitting(true);
 
-      const response = await fetch("http://localhost:5000/api/queries", {
+      const response = await fetch("https://medlife-academy.onrender.com/api/queries", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./careerapply.css";
 
-const API_URL = "http://localhost:5000/api/careers";
+const API_URL = "https://medlife-academy.onrender.com/api/careers";
 
 function CareerApply() {
   const navigate = useNavigate();

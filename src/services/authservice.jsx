@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://medlife-academy.onrender.com/api";
 
 export const loginAdmin = async (username, password) => {
   const response = await fetch(`${API_URL}/admin/login`, {
@@ -36,7 +36,6 @@ export const loginAdmin = async (username, password) => {
 
   return data;
 };
-
 
 export const getCurrentAdmin = async () => {
   try {
@@ -83,7 +82,6 @@ export const getCurrentAdmin = async () => {
   }
 };
 
-
 export const logoutAdmin = async () => {
   const token = localStorage.getItem(
     "medpath_admin_token"
@@ -117,7 +115,6 @@ export const logoutAdmin = async () => {
   );
 };
 
-
 export const getStoredAdmin = () => {
   try {
     const admin = localStorage.getItem(
@@ -139,7 +136,6 @@ export const getStoredAdmin = () => {
   }
 };
 
-
 export const isAdminLoggedIn = () => {
   const token = localStorage.getItem(
     "medpath_admin_token"
@@ -151,7 +147,6 @@ export const isAdminLoggedIn = () => {
 
   return Boolean(token && admin);
 };
-
 
 export const getAuthToken = () => {
   return localStorage.getItem(

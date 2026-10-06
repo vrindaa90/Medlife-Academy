@@ -1331,7 +1331,7 @@ function AdminReport() {
     // Keep this configurable for deployment while preserving localhost.
     const configuredApiUrl =
       window.__MEDPATH_API_URL__ ||
-      "http://localhost:5000";
+      "http://medlife-academy.onrender.com";
 
     const apiOrigin = String(
       configuredApiUrl
